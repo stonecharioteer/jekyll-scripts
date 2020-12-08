@@ -138,9 +138,9 @@ def header_proc(args):
     # TODO: this won't raise an exception if the script fails. Is there a way to
     # check for errors, while still streaming the output?
     return Popen(['jekyll-post-header', '--padding', str(args.padding),
-                                        'layout:"default"',
+                                        'layout:"post"',
                                         'date:"{}"'.format(args.date),
-                                        'title:"{}"'.format(args.title)]
+                                        'title:"{}"'.format(args.title.title())]
                                       + args.attributes,
                  stdout=PIPE, stderr=DEVNULL)
 
@@ -148,4 +148,3 @@ def header_proc(args):
 if __name__ == '__main__':
     rv = main()
     sys.exit(rv)
-

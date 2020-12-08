@@ -14,7 +14,7 @@ $ jekyll-post "S0me rand@m T1tle" -a "tags:['python', 'scripting']" -c blog
 ```
 $ jekyll-post "S0me rand@m T1tle" -a "tags:['python', 'scripting']" -o -
 ---
-layout:    'default'
+layout:    'post'
 date:      '2014-04-25 13:03:26-04:00'
 title: |
   S0me rand@m T1tle
@@ -47,7 +47,7 @@ To get these executable files on your PATH (assuming `~/.local/bin` is on your P
 
 ```
 $ cd ~/.local/bin
-$ for s in ~/projects/jekyll-scripts/{jekyll-*,title-from-url}; do ln -s "$s"; done
+$ for s in ~/code/tools/jekyll-scripts/{jekyll-*,title-from-url}; do ln -s "$s"; done
 ```
 
 
@@ -56,4 +56,3 @@ $ for s in ~/projects/jekyll-scripts/{jekyll-*,title-from-url}; do ln -s "$s"; d
 All the scripts take `-h` or `--help` as an argument to describe all their arguments. I hope that their source code is also quite readable.
 
 Please [raise an issue](https://github.com/mcinglis/jekyll-scripts/issues) if you're lost, or have a suggestion.
-
